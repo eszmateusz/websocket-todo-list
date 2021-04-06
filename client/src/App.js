@@ -4,7 +4,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 class App extends React.Component {
   state = {
-    tasks: [],
+    tasks: [
+      {name: 'Go shoping', id: 1}
+    ],
     taskName: '',
   };
 
@@ -74,6 +76,7 @@ class App extends React.Component {
               className="text-input" 
               autoComplete="off" 
               type="text" 
+              required={true}
               placeholder="Type description here" 
               id="task-name" 
               value={taskName} 
